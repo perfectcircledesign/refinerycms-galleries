@@ -1,0 +1,55 @@
+nb:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      galleries:
+        title: Galleries
+    galleries:
+      admin:
+        items:
+          actions:
+            create_new: Lag en ny Item
+            reorder: Endre rekkefølgen på Items
+            reorder_done: Ferdig å endre rekkefølgen Items
+          records:
+            title: Items
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Items enda. Klikk på "Lag en ny Gallery
+              Item" for å legge til din første item.
+          item:
+            view_live_html: Vis hvordan denne item ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne item
+            delete: Fjern denne item permanent
+        galleries:
+          actions:
+            create_new: Lag en ny Gallery
+            reorder: Endre rekkefølgen på Galleries
+            reorder_done: Ferdig å endre rekkefølgen Galleries
+          records:
+            title: Galleries
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Galleries enda. Klikk på "Lag en ny Gallery"
+              for å legge til din første gallery.
+          gallery:
+            view_live_html: Vis hvordan denne gallery ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne gallery
+            delete: Fjern denne gallery permanent
+      items:
+        show:
+          other: Andre Items
+      galleries:
+        show:
+          other: Andre Galleries
+  activerecord:
+    attributes:
+      refinery/galleries/item:
+        title: Title
+        caption: Caption
+        item: Item
+      refinery/galleries/gallery:
+        title: Title
+        caption: Caption
+        cover_image: Cover image

@@ -1,0 +1,7 @@
+<section id='records' class="tree">
+  <%= render 'records' %>
+</section>
+<aside id='actions'>
+  <%= render 'actions' %>
+</aside>
+<%= render '/refinery/admin/make_sortable', :tree => true if !searching? and ::Refinery::Galleries::Admin::GalleriesController.sortable? and ::Refinery::Galleries::Gallery.many? %>

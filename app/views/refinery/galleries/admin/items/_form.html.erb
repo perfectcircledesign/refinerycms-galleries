@@ -1,0 +1,34 @@
+<%= form_for [refinery, :galleries_admin, @item] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @item,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :caption -%>
+    <%= f.text_field :caption -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= image_fu(@item.image, '225x127#c') %>
+  </div>
+
+    <div class='field'>
+      <% if @item.gallery.present? %>
+        <% value = @item.gallery.id %>
+      <% else %>
+        <% value = params[:format] %>
+      <% end %>
+      <%= f.hidden_field :gallery_id, value: value %>
+    </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.items.admin.items.item'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @item.title) -%>
+<% end -%>

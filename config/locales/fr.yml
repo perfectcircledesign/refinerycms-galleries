@@ -1,0 +1,55 @@
+fr:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      galleries:
+        title: Galleries
+    galleries:
+      admin:
+        items:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Item
+            reorder: Réordonner les Items
+            reorder_done: Fin de réordonnancement des Items
+          records:
+            title: Items
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Item. Cliquer sur
+              "Créer un(e) nouve(au/l/lle) Item" pour créer votre premi(er/ère)
+              item.
+          item:
+            view_live_html: Voir ce(t/tte) item <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) item
+            delete: Supprimer définitivement ce(t/tte) item
+        galleries:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Gallery
+            reorder: Réordonner les Galleries
+            reorder_done: Fin de réordonnancement des Galleries
+          records:
+            title: Galleries
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Gallery. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Gallery" pour créer votre premi(er/ère) gallery.
+          gallery:
+            view_live_html: Voir ce(t/tte) gallery <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) gallery
+            delete: Supprimer définitivement ce(t/tte) gallery
+      items:
+        show:
+          other: Autres Items
+      galleries:
+        show:
+          other: Autres Galleries
+  activerecord:
+    attributes:
+      refinery/galleries/item:
+        title: Title
+        caption: Caption
+        item: Item
+      refinery/galleries/gallery:
+        title: Title
+        caption: Caption
+        cover_image: Cover image

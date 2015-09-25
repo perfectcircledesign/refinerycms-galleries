@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @gallery.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @gallery.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Caption</h1>
+    <p>
+      <%=raw @gallery.caption %>
+    </p>
+  </section>
+  <section>
+    <h1>Cover Image</h1>
+    <p>
+      <%= image_fu @gallery.cover_image, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="galleries">
+      <% @galleries.each do |gallery| %>
+        <li>
+          <%= link_to gallery.title, refinery.galleries_gallery_path(gallery) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

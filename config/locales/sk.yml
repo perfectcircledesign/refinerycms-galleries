@@ -1,0 +1,54 @@
+sk:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      galleries:
+        title: Galleries
+    galleries:
+      admin:
+        items:
+          actions:
+            create_new: Pridať Item
+            reorder: Preusporiadať Items
+            reorder_done: Koniec radenia Items
+          records:
+            title: Items
+            sorry_no_results: "Ľutujeme, ale neboli nájdené žiadne výsledky."
+            no_items_yet: Nie sú vytvorené žiadne Items. Kliknite na "Pridať
+              Item" pre pridanie prvého item.
+          item:
+            view_live_html: Zobraziť náhľad item<br/><em>(otvorí sa v novom
+              okne)</em>
+            edit: Upraviť item
+            delete: Zmazať item
+        galleries:
+          actions:
+            create_new: Pridať Gallery
+            reorder: Preusporiadať Galleries
+            reorder_done: Koniec radenia Galleries
+          records:
+            title: Galleries
+            sorry_no_results: "Ľutujeme, ale neboli nájdené žiadne výsledky."
+            no_items_yet: Nie sú vytvorené žiadne Galleries. Kliknite na "Pridať Gallery"
+              pre pridanie prvého gallery.
+          gallery:
+            view_live_html: Zobraziť náhľad gallery<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť gallery
+            delete: Zmazať gallery
+      items:
+        show:
+          other: Daľšie Items
+      galleries:
+        show:
+          other: Daľšie Galleries
+  activerecord:
+    attributes:
+      refinery/galleries/item:
+        title: Title
+        caption: Caption
+        item: Item
+      refinery/galleries/gallery:
+        title: Title
+        caption: Caption
+        cover_image: Cover image

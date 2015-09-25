@@ -1,0 +1,16 @@
+<h1><%= @gallery.title %></h1>
+<section id='records'>
+  <%= render 'records' %>
+</section>
+<aside id='actions'>
+  <%= render 'actions' %>
+</aside>
+<%= render '/refinery/admin/make_sortable', :tree => false if !searching? and ::Refinery::Galleries::Admin::ItemsController.sortable? and ::Refinery::Galleries::Item.many? %>
+
+
+
+
+
+
+
+

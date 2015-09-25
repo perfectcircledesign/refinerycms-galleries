@@ -1,0 +1,52 @@
+zh-CN:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      galleries:
+        title: Galleries
+    galleries:
+      admin:
+        items:
+          actions:
+            create_new: "建立新的 Item"
+            reorder: "对 Items 重新排序"
+            reorder_done: "对 Items 的重新排序结束"
+          records:
+            title: Items
+            sorry_no_results: "对不起，未找到结果。"
+            no_items_yet: 目前没有 Items . 点击 "Add New Item" 创建一个gallery
+              item.
+          item:
+            view_live_html: "查看 item 的最新内容.<br/><em>(新窗口中打开)</em>"
+            edit: "编辑 item"
+            delete: "永久删除 item"
+        galleries:
+          actions:
+            create_new: "建立新的 Gallery"
+            reorder: "对 Galleries 重新排序"
+            reorder_done: "对 Galleries 的重新排序结束"
+          records:
+            title: Galleries
+            sorry_no_results: "对不起，未找到结果。"
+            no_items_yet: 目前没有 Galleries . 点击 "Add New Gallery" 创建一个gallery.
+          gallery:
+            view_live_html: "查看 gallery 的最新内容.<br/><em>(新窗口中打开)</em>"
+            edit: "编辑 gallery"
+            delete: "永久删除 gallery"
+      items:
+        show:
+          other: "其他 Items"
+      galleries:
+        show:
+          other: "其他 Galleries"
+  activerecord:
+    attributes:
+      refinery/galleries/item:
+        title: Title
+        caption: Caption
+        item: Item
+      refinery/galleries/gallery:
+        title: Title
+        caption: Caption
+        cover_image: Cover image

@@ -1,0 +1,54 @@
+cs:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      galleries:
+        title: Galleries
+    galleries:
+      admin:
+        items:
+          actions:
+            create_new: Přidat Item
+            reorder: "Řadit Items"
+            reorder_done: Konec řazení Items
+          records:
+            title: Items
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Items. Zvolte "Přidat
+              Item" pro přidání prvního item.
+          item:
+            view_live_html: Zobrazit náhled item<br/><em>(otevře se v novém
+              okně)</em>
+            edit: Upravit item
+            delete: Smazat item
+        galleries:
+          actions:
+            create_new: Přidat Gallery
+            reorder: "Řadit Galleries"
+            reorder_done: Konec řazení Galleries
+          records:
+            title: Galleries
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Galleries. Zvolte "Přidat Gallery"
+              pro přidání prvního gallery.
+          gallery:
+            view_live_html: Zobrazit náhled gallery<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit gallery
+            delete: Smazat gallery
+      items:
+        show:
+          other: Další Items
+      galleries:
+        show:
+          other: Další Galleries
+  activerecord:
+    attributes:
+      refinery/galleries/item:
+        title: Title
+        caption: Caption
+        item: Item
+      refinery/galleries/gallery:
+        title: Title
+        caption: Caption
+        cover_image: Cover Image

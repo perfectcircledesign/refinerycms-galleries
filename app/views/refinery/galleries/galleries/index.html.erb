@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="galleries">
+    <% @galleries.each do |gallery| %>
+      <li>
+        <%= link_to gallery.title, refinery.galleries_gallery_path(gallery) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

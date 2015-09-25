@@ -1,0 +1,82 @@
+<ul>
+
+
+
+  <%if @gallery.present? %>
+    <%= form_for [refinery, :galleries_admin, @item], remote: true do |f| -%>
+
+      <%
+         field ||= :image_id
+         image ||= @item.image
+         randomiser = rand(Time.now.yesterday.to_i * Time.now.to_i)
+         current_image_link_href = refinery.insert_admin_images_path(:dialog => true, :callback => "image_picker_#{randomiser}_changed",
+                                                                     :width => 866, :height => 510)
+      -%>
+      <div id='image_picker_container_<%= randomiser %>'>
+        <%= f.hidden_field field, :class => "current_image_id" -%>
+        <li>
+          <%= link_to 'Add new Image', current_image_link_href,
+                      :class => "add_icon" %>
+        </li>
+      </div>
+
+        <%= f.hidden_field :gallery_id, value: @gallery.id %>
+
+      <% content_for :javascripts do -%>
+          <script>
+              var image_picker_<%= randomiser %> = {};
+              $(document).ready(function(e) {
+                  $.extend(true, image_picker_<%= randomiser %>, image_picker);
+                  image_picker_<%= randomiser %> = image_picker_<%= randomiser %>.init({
+                      field: '.current_image_id'
+                  });
+
+              });
+              image_picker_<%= randomiser %>_changed = function(args){
+                  $.proxy(image_picker_<%= randomiser %>.changed, {
+                      container: '#image_picker_container_<%= randomiser %>'
+                      , picker: image_picker_<%= randomiser %>
+                      , image: args
+                  })();
+                  $("#new_item").submit();
+                  location.reload();
+
+              };
+          </script>
+      <% end %>
+
+  <% end -%>
+
+
+      <li>
+        <%= form_for [refinery, :galleries_admin, Refinery::Galleries::Item.new], :html => {class: 'new_items'} do |f| %>
+          <%= link_to_function  'Upload & Add Multiple Images', '$("#item_image").click()'%>
+          <%= f.file_field :image, multiple: true, style: 'display:none' %>
+          <%= f.hidden_field :gallery_id, value: @gallery.id %>
+        <% end %>
+      </li>
+
+  <% end %>
+
+
+
+
+  <% if !searching? && ::Refinery::Galleries::Admin::ItemsController.sortable? && ::Refinery::Galleries::Item.many? %>
+      <li>
+        <%= link_to t('.reorder', :what => "Gallery Items"),
+                    refinery.galleries_admin_items_path,
+                    :id => "reorder_action",
+                    :class => "reorder_icon" %>
+
+        <%= link_to t('.reorder_done', :what => "Gallery Items"),
+                    refinery.galleries_admin_items_path,
+                    :id => "reorder_action_done",
+                    :style => "display: none;",
+                    :class => "reorder_icon" %>
+      </li>
+  <% end %>
+
+
+
+</ul>
+

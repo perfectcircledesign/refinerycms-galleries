@@ -1,0 +1,34 @@
+<%= form_for [refinery, :galleries_admin, @gallery] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @gallery,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :caption -%>
+    <%= f.text_field :caption -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :cover_image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :cover_image_id,
+               :image => @gallery.cover_image,
+               :toggle_image_display => false -%>
+  </div>
+
+    <div class='field'>
+    <%= f.label :parent_id %>
+    <%= f.select :parent_id, nested_set_options(Refinery::Galleries::Gallery, @gallery) {|i| "#{'-' * i.level} #{i.title}" } , :include_blank => true %>
+    </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.galleries.admin.galleries.gallery'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @gallery.title) -%>
+<% end -%>

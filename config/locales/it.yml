@@ -1,0 +1,54 @@
+it:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      galleries:
+        title: Galleries
+    galleries:
+      admin:
+        items:
+          actions:
+            create_new: Aggiungi Nuovo Item
+            reorder: Riordina Items
+            reorder_done: Termina il Riordino di Items
+          records:
+            title: Items
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Items. Clicca "Aggiungi Nuovo
+              Item" per aggiungere il tuo primo item.
+          item:
+            view_live_html: Guarda live questo item <br/><em>(apre una nuova
+              finestra)</em>
+            edit: Modifica questo item
+            delete: Rimuovi per sempre questo item
+        galleries:
+          actions:
+            create_new: Aggiungi Nuovo Gallery
+            reorder: Riordina Galleries
+            reorder_done: Termina il Riordino di Galleries
+          records:
+            title: Galleries
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Galleries. Clicca "Aggiungi Nuovo Gallery"
+              per aggiungere il tuo primo gallery.
+          gallery:
+            view_live_html: Guarda live questo gallery <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo gallery
+            delete: Rimuovi per sempre questo gallery
+      items:
+        show:
+          other: Altri Items
+      galleries:
+        show:
+          other: Altri Galleries
+  activerecord:
+    attributes:
+      refinery/galleries/item:
+        title: Title
+        caption: Caption
+        item: Item
+      refinery/galleries/gallery:
+        title: Title
+        caption: Caption
+        cover_image: Cover image

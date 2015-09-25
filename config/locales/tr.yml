@@ -1,0 +1,55 @@
+tr:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      galleries:
+        title: Galleries
+    galleries:
+      admin:
+        items:
+          actions:
+            create_new: Yeni Ekle Item
+            reorder: Tekrar sirala Items
+            reorder_done: Tekrar siralama tamamlandiItems
+          records:
+            title: Items
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Items yok henuz.  Tikla "Yeni Ekle
+              Item" eklemek senin ilk item.
+          item:
+            view_live_html: Bunu canlu item goruntule <br/><em>(yeni bir
+              pencerede acar)</em>
+            edit: Bunu Duzenle item
+            delete: Bunu Sil item sonsuza dek
+        galleries:
+          actions:
+            create_new: Yeni Ekle Gallery
+            reorder: Tekrar sirala Galleries
+            reorder_done: Tekrar siralama tamamlandiGalleries
+          records:
+            title: Galleries
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Galleries yok henuz.  Tikla "Yeni Ekle Gallery"
+              eklemek senin ilk gallery.
+          gallery:
+            view_live_html: Bunu canlu gallery goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle gallery
+            delete: Bunu Sil gallery sonsuza dek
+      items:
+        show:
+          other: Diger Items
+      galleries:
+        show:
+          other: Diger Galleries
+  activerecord:
+    attributes:
+      refinery/galleries/item:
+        title: Title
+        caption: Caption
+        item: Item
+      refinery/galleries/gallery:
+        title: Title
+        caption: Caption
+        cover_image: Cover image

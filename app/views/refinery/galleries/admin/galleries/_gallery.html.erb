@@ -1,0 +1,40 @@
+<li class='clearfix record icons <%= cycle("on", "on-hover") %>' id="<%= dom_id(gallery) -%>">
+  <div class="clearfix">
+      <span class='title'>
+        <%= gallery.title %>
+        <span class="preview">- <%= gallery.items.count %> Images</span>
+      </span>
+      <span class='actions'>
+
+
+
+        <%= link_to refinery_icon_tag("application_go.png"), refinery.galleries_gallery_path(gallery),
+            :title => t('.view_live_html'),
+            :target => "_blank" %>
+
+        <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_galleries_admin_gallery_path(gallery),
+             :title => t('.edit') %>
+
+        <%#= link_to refinery_icon_tag("page_add.png"), refinery.edit_galleries_admin_gallery_path(gallery),
+                    :title => t('.edit') %>
+
+        <%#= link_to refinery_icon_tag("image_add.png"), refinery.new_galleries_admin_item_path(gallery, :dialog => true, :width => 725, :height => 525),
+                    :title => t('.add_image') %>
+
+        <%= link_to refinery_icon_tag("image_add.png"), refinery.gallery_items_path(gallery),
+                    :title => t('.add_image') %>
+
+        <%= link_to refinery_icon_tag("delete.png"), refinery.galleries_admin_gallery_path(gallery),
+                    :class => "cancel confirm-delete",
+                    :title => t('.delete'),
+                    :confirm => t('message', :scope => 'refinery.admin.delete', :title => gallery.title),
+                    :method => :delete %>
+
+      </span>
+  </div>
+  <ul class='nested'>
+    <%= render :partial => 'gallery', :collection => gallery.children %>
+  </ul>
+
+
+</li>

@@ -1,0 +1,55 @@
+nl:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      galleries:
+        title: Galleries
+    galleries:
+      admin:
+        items:
+          actions:
+            create_new: Nieuwe Item toevoegen
+            reorder: De volgorde van de Items wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Item-volgorde
+          records:
+            title: Items
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Items. Druk op 'Nieuwe Gallery
+              Item toevoegen' om de eerste toe te voegen.
+          item:
+            view_live_html: Deze item op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze item
+            delete: Deze item definitief verwijderen
+        galleries:
+          actions:
+            create_new: Nieuwe Gallery toevoegen
+            reorder: De volgorde van de Galleries wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Gallery-volgorde
+          records:
+            title: Galleries
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Galleries. Druk op 'Nieuwe Gallery toevoegen'
+              om de eerste toe te voegen.
+          gallery:
+            view_live_html: Deze gallery op de website bekijken <br/><em>(opent in
+              een nieuw venster)</em>
+            edit: Bewerk deze gallery
+            delete: Deze gallery definitief verwijderen
+      items:
+        show:
+          other: Andere Items
+      galleries:
+        show:
+          other: Andere Galleries
+  activerecord:
+    attributes:
+      refinery/galleries/item:
+        title: Title
+        caption: Caption
+        item: Item
+      refinery/galleries/gallery:
+        title: Title
+        caption: Caption
+        cover_image: Cover image
